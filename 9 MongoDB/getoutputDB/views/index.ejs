@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <main class="container">
+        <h1 class="font-weight-normal text-left text-primary">All Blogs</h1>
+        <section class="row">
+            <% if(blogs.length > 0 ){ %>
+            <% blogs.forEach(blog => { %>
+            <section class="blog p-4 border border-left-0 border-right-0 border-primary mt-3 col-12">
+                <h2 class="blog_heading"><%= blog.title%></h2>
+                <h6 class="blog_heading text-secondary mt-2 mb-2"><%= blog.snippet%></h6>
+                <p class="blog_body text-secondary"><%= blog.body%></p>
+            </section>
+            <% })%>
+            <% } else{ %>
+            <p class="p-4 text-secondary">There are no blogs to display</p>
+            <% } %>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

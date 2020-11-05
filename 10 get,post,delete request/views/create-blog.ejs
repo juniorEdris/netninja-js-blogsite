@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <main class="container">
+        <form action="/blogs" method="POST">
+            <div class="row">
+                <div class="col-12 ">
+                    <input type="text" class="form-control border-primary" name="title" placeholder="Blog Title">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 ">
+                    <input type="text" class="form-control border-primary mt-2" name="snippet" placeholder="Blog Snippet">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col form-group mt-2">
+                    <textarea class="form-control border-primary" name="body" placeholder="Write your Snippet"
+                        id="exampleFormControlTextarea1" rows="6"></textarea>
+                </div>
+            </div>
+            </div>
+            <button class="btn btn-primary col-12">Submit</button>
+
+        </form>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+
+
+</body>
+
+</html>
